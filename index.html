@@ -134,36 +134,42 @@
 
     <!-- 🌐 BAGIAN 1: NAVBAR (NAVIGASI ATAS YANG RESPONSIF & TRANSPARAN) -->
     <nav class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur-md border-b border-white/10 px-6 py-4">
-        <div class="max-w-5xl mx-auto flex justify-between items-center">
+    <div class="max-w-5xl mx-auto flex justify-between items-center">
+        
+        <!-- Logo Nama -->
+        <a href="#" class="text-xl font-bold tracking-wider text-white hover:text-emerald-400 transition duration-300">
+            MITA<span class="text-emerald-400">.DEV</span>
+        </a>
+
+        <!-- Menu Navigasi (HANYA DI LAPTOP) -->
+        <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+            <a href="#home" class="hover:text-emerald-400 transition duration-350">Home</a>
+            <a href="#projects" class="hover:text-emerald-400 transition duration-350">Projects</a>
+            <a href="#contact" class="hover:text-emerald-400 transition duration-350">Contact</a>
             
-            <!-- Logo Nama -->
-            <a href="#" class="text-xl font-bold tracking-wider text-white hover:text-emerald-400 transition duration-300">
-                MITA<span class="text-emerald-400">.DEV</span>
+            <!-- Tombol Hire Me Laptop -->
+            <a href="https://wa.me/628571270822" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-4 py-2 rounded-lg font-bold transition duration-300 transform active:scale-95 shadow-lg shadow-emerald-500/10">
+                Hire Me 🚀
             </a>
+        </div>
 
-            <!-- Menu Navigasi (Otomatis Sembunyi di HP kecil, Muncul di Laptop) -->
-            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
-                <a href="#home" class="hover:text-emerald-400 transition duration-350">Home</a>
-                <a href="#projects" class="hover:text-emerald-400 transition duration-350">Projects</a>
-                <a href="#contact" class="hover:text-emerald-400 transition duration-350">Contact</a>
-                
-                <!-- Tombol Aksi Kecil -->
-                <a href="https://wa.me/6285712708223" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-4 py-2 rounded-lg font-bold transition duration-300 transform active:scale-95 shadow-lg shadow-emerald-500/10">
-                    Hire Me 🚀
-                </a>
-                <button id="theme-toggle" class="btn-theme">
+        <!-- Wadah Tombol untuk di HP (Selalu muncul, tapi menu teks disembunyikan) -->
+        <div class="flex items-center gap-4">
+            
+            <!-- Tombol Dark/Light Mode (Ditaruh di sini agar di HP dan Laptop SELALU MUNCUL) -->
+            <button id="theme-toggle" class="btn-theme text-xl hover:scale-110 transition cursor-pointer p-1">
                 <span id="theme-icon">☀️</span>
-                </button>
+            </button>
 
-            </div>
-
-            <!-- Tombol Menu HP -->
+            <!-- Tombol Menu HP (Hanya muncul di HP) -->
             <button class="block md:hidden text-xl text-slate-300 hover:text-white active:scale-90">
                 🍔
             </button>
-
+            
         </div>
-    </nav>
+
+    </div>
+</nav>
 
     <!-- 🏡 BAGIAN 2: HERO SECTION -->
     <section id="home" class="max-w-5xl mx-auto px-6 pt-20 pb-24 flex flex-col md:flex-row items-center justify-between gap-12">
