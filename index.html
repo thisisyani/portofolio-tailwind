@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en" class="bg-slate-900 scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A. Mita Silvyani - Space Portofolio 🌌</title>
+
+    <head>
+    <!-- Kode-kode kamu yang lain (seperti link Tailwind, meta tag, dll) -->
+
+    <style>
+    /* KUNCI UTAMA: Aturan ketika mode terang aktif */
+    body.light-theme {
+        background-color: #f4f4f4 !important;
+        color: #1a1a1a !important;  
+    }
+
+    /* 1. Mengubah Judul Utama & Sub-judul Halaman */
+    body.light-theme h2 {
+        color: #1a1a1a !important;
+    }
+    body.light-theme p {
+        color: #4a5568 !important;
+    }
+
+    /* Perbaikan untuk Kartu Proyek di Mode Terang */
+    body.light-theme .project-card,
+    body.light-theme [class*="bg-white/5"], 
+    body.light-theme [class*="bg-slate"] { 
+    /* Kode di atas bertugas memaksa kotak abu-abu/gelap berubah jadi putih */
+        background-color: #ffffff !important; 
+        border-color: #e2e8f0 !important; /* Kasih border tipis warna abu-abu super halus */
+        box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.05) !important; /* Efek shadow mewah */
+    }
+
+    /* Memperjelas Judul Proyek di dalam kotak */
+    body.light-theme .project-card h3,
+    body.light-theme h3 {
+        color: #0f172a !important; /* Hitam pekat nan elegan */
+    }
+
+    /* Memperjelas Teks Deskripsi di dalam kotak */
+    body.light-theme .project-card p,
+    body.light-theme .project-card span,
+    body.light-theme section p {
+        color: #334155 !important; /* Abu-abu gelap yang sangat mudah dibaca */
+    }
+
+    /* 3. Memperjelas Label pada Form Kontak (Get In Touch) */
+    body.light-theme label {
+        color: #334155 !important; /* Tulisan YOUR NAME, dll jadi abu-abu gelap tegas */
+    }
+
+    /* 4. Memperjelas Judul & Teks di Bagian Paling Atas (Hero Section) */
+    body.light-theme h1 {
+        color: #0f172a !important; /* Mengubah tulisan "Crafting Fast &" jadi Slate gelap */
+    }
+
+    body.light-theme .hero-description {
+        color: #334155 !important; /* Biar tulisan "Hi, I'm Mita..." tajam dibaca */
+    }
+    
+    /* Mengubah tampilan tombol filter saat Mode Terang aktif */
+    body.light-theme .btn-filter {
+    /* Mengubah warna latar tombol yang tidak aktif jadi abu-abu terang halus */
+        background-color: #f1f5f9 !important; 
+    /* Mengubah garis tepi agar lebih kelihatan di layar putih */
+        border: 1px solid #cbd5e1 !important; 
+    /* KUNCI UTAMA: Mengubah warna tulisan tombol menjadi hitam pekat elegan */
+        color: #0f172a !important; 
+    }
+
+    /* Efek saat tombol filter di-hover (disorot mouse) di mode terang */
+    body.light-theme .btn-filter:hover {
+        background-color: #e2e8f0 !important;
+        color: #000000 !important;
+    }
+
+    /* KHUSUS Tombol yang sedang Aktif (All Projects) agar tetap kontras */
+    body.light-theme .btn-filter.bg-emerald-500 {
+        background-color: #10b981 !important; /* Tetap hijau emerald */
+        color: #0f172a !important;            /* Tulisannya hitam tegas agar kontras */
+        border: none !important;
+    }
+
+    /* 1. Mengubah Latar Belakang Navbar saat Mode Terang */
+    body.light-theme nav {
+        background-color: rgba(255, 255, 255, 0.8) !important; /* Putih transparan estetik */
+        border-bottom: 1px solid rgba(0, 0, 0, 0.08) !important; /* Garis pembatas tipis abu-abu */
+        backdrop-blur: md; /* Efek blur kaca di belakangnya tetap aktif */
+    }
+
+    /* 2. Mengubah Tulisan Logo (MITA) menjadi Hitam */
+    body.light-theme nav a.text-xl {
+        color: #0f172a !important; 
+    }
+
+    /* 3. Mengubah Tulisan Menu Navigasi (Home, Projects, Contact) menjadi Gelap */
+    body.light-theme nav .hidden.md\:flex a:not(.bg-emerald-500) {
+        color: #334155 !important; /* Abu-abu gelap elegan */
+    }
+
+    /* 4. Efek Hover Menu Navigasi di Mode Terang agar tetap berubah warna */
+    body.light-theme nav .hidden.md\:flex a:not(.bg-emerald-500):hover {
+        color: #10b981 !important; /* Berubah jadi hijau emerald saat disorot */
+    }
+
+    /* 5. Menyesuaikan Tombol Sakelar Tema (Bulatan Luarnya jika ada) */
+    body.light-theme .btn-theme {
+        border-color: #0f172a !important;
+        color: #0f172a !important;
+    }
+    </style>
+    </head>
+
+    <!-- Kabel Ajaib Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="text-slate-100 min-h-screen font-sans selection:bg-emerald-500 selection:text-slate-950">
+
+    <!-- 🌐 BAGIAN 1: NAVBAR (NAVIGASI ATAS YANG RESPONSIF & TRANSPARAN) -->
+    <nav class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur-md border-b border-white/10 px-6 py-4">
+        <div class="max-w-5xl mx-auto flex justify-between items-center">
+            
+            <!-- Logo Nama -->
+            <a href="#" class="text-xl font-bold tracking-wider text-white hover:text-emerald-400 transition duration-300">
+                MITA<span class="text-emerald-400">.DEV</span>
+            </a>
+
+            <!-- Menu Navigasi (Otomatis Sembunyi di HP kecil, Muncul di Laptop) -->
+            <div class="hidden md:flex items-center gap-8 text-sm font-medium text-slate-300">
+                <a href="#home" class="hover:text-emerald-400 transition duration-350">Home</a>
+                <a href="#projects" class="hover:text-emerald-400 transition duration-350">Projects</a>
+                <a href="#contact" class="hover:text-emerald-400 transition duration-350">Contact</a>
+                
+                <!-- Tombol Aksi Kecil -->
+                <a href="https://wa.me/6285712708223" target="_blank" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-4 py-2 rounded-lg font-bold transition duration-300 transform active:scale-95 shadow-lg shadow-emerald-500/10">
+                    Hire Me 🚀
+                </a>
+                <button id="theme-toggle" class="btn-theme">
+                <span id="theme-icon">☀️</span>
+                </button>
+
+            </div>
+
+            <!-- Tombol Menu HP (Sementara pakai Emoji Hamburgers dulu) -->
+            <button class="block md:hidden text-xl text-slate-300 hover:text-white active:scale-90">
+                🍔
+            </button>
+
+        </div>
+    </nav>
+
+    <!-- 🏡 BAGIAN 2: HERO SECTION (VERSI ENGLISH AESTHETIC) -->
+    <section id="home" class="max-w-5xl mx-auto px-6 pt-20 pb-24 flex flex-col md:flex-row items-center justify-between gap-12">
+        
+        <!-- Tulisan Sambutan -->
+        <div class="flex-1 text-center md:text-left space-y-6">
+            <span class="inline-block bg-emerald-500/10 border border-emerald-500/30 text-emerald-400 text-xs font-semibold uppercase tracking-widest px-3 py-1 rounded-full animate-pulse">
+                Open for Opportunities 🟢
+            </span>
+            <h1 class="text-4xl md:text-6xl font-extrabold text-white leading-tight tracking-tight">
+                Crafting Fast & <br>
+                <span class="bg-gradient-to-r from-emerald-400 to-sky-400 bg-clip-text text-transparent">Aesthetic Web Experiences</span>
+            </h1>
+            <p class="text-slate-400 text-base md:text-lg max-w-xl leading-relaxed">
+                Hi, I'm Mita. A Frontend Explorer dedicated to turning complex code into beautifully responsive, lightning-fast digital solutions. Welcome to my creative space.
+            </p>
+            <div class="flex justify-center md:justify-start gap-4 pt-2">
+                <a href="#projects" class="bg-emerald-500 hover:bg-emerald-600 text-slate-950 px-6 py-3 rounded-xl font-bold transition duration-300 transform active:scale-95 shadow-lg shadow-emerald-500/20">
+                    Explore My Works 👇
+                </a>
+            </div>
+        </div>
+
+        <!-- Area Foto Profil -->
+        <div class="relative w-64 h-64 md:w-80 md:h-80 flex-shrink-0">
+            <div class="absolute inset-0 bg-gradient-to-tr from-emerald-500 to-sky-500 rounded-3xl rotate-6 blur-md opacity-30"></div>
+            <img src="foto-profil.jpeg" alt="Mita Silvyani" class="relative w-full h-full object-cover rounded-3xl border border-white/20 shadow-2xl">
+        </div>
+
+    </section>
+
+    <!-- 🏆 BAGIAN GALERI PROYEK (FEATURED MASTERPIECES) -->
+    <section class="py-20 px-6 max-w-7xl mx-auto">
+    
+        <!-- 1. Bagian Judul -->
+        <div class="text-center mb-10">
+            <h2 class="text-xl md:text-3xl font-extrabold text-white tracking-tight">Featured Masterpieces</h2>
+            <p class="text-slate-400 text-xs md:text-sm mt-1">A curated showcase of my frontend development journey.</p>
+        </div>
+
+        <!-- 🌟 BARISAN TOMBOL FILTER (BERJAJAR DI ATAS KARTU) -->
+        <div class="flex flex-row flex-wrap justify-center items-center gap-3 mb-12">
+            <!-- Tombol All -->
+        <button data-filter="all" onclick="saringKarya('all')" class="btn-filter bg-emerald-500 text-slate-950 text-xs md:text-sm font-bold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95 shadow-lg shadow-emerald-500/20">
+        ✨ All Projects
+        </button>
+     
+        <!-- Tombol Tailwind -->
+        <button data-filter="tailwind" onclick="saringKarya('tailwind')" class="btn-filter bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 text-xs md:text-sm font-semibold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95">
+        🍃 Tailwind CSS
+        </button>
+
+        <!-- Tombol JavaScript -->
+        <button data-filter="javascript" onclick="saringKarya('javascript')" class="btn-filter bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 text-xs md:text-sm font-semibold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95">
+        🔮 JavaScript Vanilla
+        </button>
+        </div>
+
+        <!-- WADAH UTAMA KARTU PROYEK  -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+
+        <!-- KARTU 1: Advanced To-Do List (Disisipkan di awal tag div kartu) -->
+        <div data-category="javascript" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-2xl">📝</span>
+                <span class="text-xs font-semibold text-emerald-400 bg-emerald-400/10 px-2 py-1 rounded">Vanilla JS</span>
+            </div>
+            <h3 class="font-bold text-xl text-white mb-2">Advanced To-Do List</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">A sleek task management app featuring custom local storage, filters, and beautiful interactive state animations.</p>
+        </div>
+        <a href="#" class="text-emerald-400 font-medium hover:underline inline-flex items-center gap-1 text-sm"> Live Demo 🚀</a>
+        </div>
+
+        <!-- KARTU 2: Neon Calculator (Disisipkan di awal tag div kartu) -->
+        <div data-category="javascript" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-2xl">🧮</span>
+                <span class="text-xs font-semibold text-sky-400 bg-sky-400/10 px-2 py-1 rounded">UI/UX Study</span>
+            </div>
+            <h3 class="font-bold text-xl text-white mb-2">Neon Calculator</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">A gorgeous glassmorphic calculator built with highly precise mathematical logic and an ultra-modern dark theme.</p>
+        </div>
+        <a href="#" class="text-sky-400 font-medium hover:underline inline-flex items-center gap-1 text-sm"> Live Demo 🚀 </a>
+        </div>
+
+        <!-- KARTU 3: Space Portfolio Hub (Disisipkan di awal tag div kartu) -->
+        <div data-category="tailwind" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
+        <div>
+            <div class="flex justify-between items-center mb-4">
+                <span class="text-2xl">🍃</span>
+                <span class="text-xs font-semibold text-purple-400 bg-purple-400/10 px-2 py-1 rounded">Tailwind CSS</span>
+            </div>
+            <h3 class="font-bold text-xl text-white mb-2">Space Portfolio Hub</h3>
+            <p class="text-gray-400 text-sm leading-relaxed mb-4">My current advanced project showcasing utility-first styling, grid layouts, and advanced responsiveness.</p>
+        </div>
+        <a href="#" class="text-purple-400 font-medium hover:underline inline-flex items-center gap-1 text-sm"> Live Demo 🚀</a>
+        </div>
+
+        </div>
+    </section>
+    
+        <!-- Cekatan CSS Grid: 1 Kolom di HP, 2 Kolom di Tablet, 3 Kolom di Laptop Otomatis! -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6"> </div>
+
+    </section>
+
+        <!-- 📱 BAGIAN 3: CONTACT SECTION (FORMULIR KONTAK GLASSMORPHISM) -->
+    <section id="contact" class="max-w-5xl mx-auto px-6 py-20 border-t border-white/5">
+        
+        <!-- Judul Bagian Kontak -->
+        <div class="text-center max-w-xl mx-auto mb-12">
+            <h2 class="text-3xl font-bold text-white mb-2">Get In Touch</h2>
+            <p class="text-slate-400 text-sm">Have a brilliant project idea or just want to say hi? Drop a message and let's build something incredible together.</p>
+        </div>
+
+        <!-- Wadah Formulir (Mewah Bergaya Kaca) -->
+        <div class="max-w-md mx-auto bg-white/5 border border-white/10 p-8 rounded-3xl shadow-xl backdrop-blur-md">
+            <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 max-w-lg mx-auto mt-6">
+
+            <!-- 🔑 KUNCI RAHASIA (Ganti teks di bawah dengan Access Key kamu nanti) -->
+            <input type="hidden" name="access_key" value="42604bf6-5868-473e-9d42-47e8cad6268d">
+ 
+                <!-- Kolom Nama -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">YOUR NAME</label>
+                    <input type="text" name="name" required placeholder="e.g. Jane Doe" class="w-full bg-slate-900/60 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-emerald-400 transition">
+                </div> 
+
+                <!-- Kolom Email -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">EMAIL ADDRESS</label>
+                    <input type="email" name="email" required placeholder="jane@example.com" class="w-full bg-slate-900/60 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-emerald-400 transition">
+                </div>
+
+                <!-- Kolom Pesan -->
+                <div>
+                    <label class="block text-sm text-gray-400 mb-1">MESSAGE</label>
+                    <textarea name="message" required rows="4" placeholder="Tell me about your amazing idea..." 
+                        class="w-full bg-slate-900/60 border border-slate-800 rounded-xl p-3 text-white focus:outline-none focus:border-emerald-400 transition resize-none"></textarea>
+                </div>
+
+                <!-- Tombol Kirim -->
+                <button type="submit" 
+                    class="w-full bg-emerald-400 hover:bg-emerald-500 text-slate-900 font-bold p-3 rounded-xl transition duration-300 transform hover:-translate-y-0.5">
+                    Send Message ✉️
+                </button>
+
+            </form>
+        </div>
+    </section>
+
+<!-- 🔮 MANTRA JAVASCRIPT: ANIMASI SCROLL + FILTER PROYEK MEWAH -->
+<script>
+  // ==========================================
+  // 1. LOGIKA UTAMA FILTER PROYEK (SAAT DIKLIK)
+  // ==========================================
+  function saringKarya(kategoriPilihan) {
+    const semuaKartu = document.querySelectorAll('.kartu-proyek');
+    
+    semuaKartu.forEach(kartu => {
+      const kategoriKartu = kartu.getAttribute('data-category');
+      
+      // Jika pilih 'all' atau kategori kartu cocok dengan tombol
+      if (kategoriPilihan === 'all' || kategoriKartu === kategoriPilihan) {
+        // Tampilkan kartu dengan animasi smooth
+        kartu.classList.remove('hidden');
+        setTimeout(() => {
+          kartu.classList.remove('opacity-0', 'scale-95');
+          kartu.classList.add('opacity-100', 'scale-100');
+        }, 50);
+      } else {
+        // Sembunyikan kartu dengan efek memudar dulu
+        kartu.classList.remove('opacity-100', 'scale-100');
+        kartu.classList.add('opacity-0', 'scale-95');
+        
+        // Tunggu transisi memudar selesai (300ms), baru hilangkan dari layout
+        setTimeout(() => {
+          kartu.classList.add('hidden');
+        }, 300);
+      }
+    });
+
+    // B. MANIPULASI WARNA TOMBOL AKTIFsecara aman
+    const semuaTombol = document.querySelectorAll('.btn-filter');
+    
+    // Reset semua tombol ke jubah gelap bawaanmu
+    semuaTombol.forEach(tombol => {
+      tombol.className = "btn-filter bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 text-xs md:text-sm font-semibold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95";
+    });
+    
+    // Beri jubah hijau menyala khusus untuk tombol yang baru saja diklik
+    if (window.event && window.event.currentTarget) {
+      window.event.currentTarget.className = "btn-filter bg-emerald-500 text-slate-950 text-xs md:text-sm font-bold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95 shadow-lg shadow-emerald-500/20";
+    }
+  }
+
+  // ==========================================
+  // 2. LOGIKA INTERSECTION OBSERVER (SAAT SCROLL)
+  // ==========================================
+  document.addEventListener("DOMContentLoaded", () => {
+    const semuaKartu = document.querySelectorAll(".kartu-proyek");
+
+    const opsiPengintai = {
+      root: null, 
+      threshold: 0.15,
+    };
+
+    const aksiPengintai = (entri, pengintai) => {
+      entri.forEach((targetKartu) => {
+        if (targetKartu.isIntersecting) {
+          const kartu = targetKartu.target;
+          
+          // Lepas jubah transparan & meluncur naik
+          kartu.classList.remove("opacity-0", "translate-y-10");
+          kartu.classList.add("opacity-100", "translate-y-0");
+
+          // Matikan radar jika animasi scroll pertama sudah beres
+          pengintai.unobserve(kartu);
+        }
+      });
+    };
+
+    const pengintaiSakti = new IntersectionObserver(aksiPengintai, opsiPengintai);
+
+    semuaKartu.forEach((kartu) => {
+      pengintaiSakti.observe(kartu);
+    });
+  });
+    const themeToggleBtn = document.getElementById('theme-toggle');
+    const themeIcon = document.getElementById('theme-icon');
+
+    // 1. Cek apakah user sebelumnya pernah pilih mode terang
+    if (localStorage.getItem('theme') === 'light') {
+        document.body.classList.add('light-theme');
+        themeIcon.textContent = '🌙'; // Ubah jadi bulan karena posisi sekarang lagi terang
+    }
+
+    // 2. Fungsi ketika tombol sakelar diklik
+    themeToggleBtn.addEventListener('click', () => {
+    // Toggle class light-theme (kalau ada dihapus, kalau tidak ada ditambah)
+    document.body.classList.toggle('light-theme');
+  
+    // Cek apakah sekarang posisinya lagi mode terang atau tidak
+    if (document.body.classList.contains('light-theme')) {
+        themeIcon.textContent = '🌙'; // Kasih kode Bulan jika layar sedang terang
+        localStorage.setItem('theme', 'light'); // Simpan pilihan di memori
+        } 
+    else {
+        themeIcon.textContent = '☀️'; // Kasih kode Matahari jika layar balik gelap
+        localStorage.setItem('theme', 'dark');  // Simpan pilihan di memori
+    }
+});
+</script>
+
+    <!-- 🌌 BAGIAN 4: FOOTER -->
+    <footer class="border-t border-white/5 bg-slate-950/40 py-8 px-6 text-center text-xs text-slate-500">
+        <div class="max-w-5xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
+            <p>© 2026 A. Mita Silvyani. Crafted with love and Tailwind CSS. 🍃</p>
+            <div class="flex gap-6">
+                <a href="#home" class="hover:text-emerald-400 transition duration-200">Back to Top ↑</a>
+            </div>
+        </div>
+    </footer>
+    
+</body>
+</html>
+
+
+
+   
