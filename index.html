@@ -6,8 +6,7 @@
     <title>A. Mita Silvyani - Space Portofolio 🌌</title>
 
     <head>
-    <!-- Kode-kode kamu yang lain (seperti link Tailwind, meta tag, dll) -->
-
+   
     <style>
     /* KUNCI UTAMA: Aturan ketika mode terang aktif */
     body.light-theme {
@@ -15,7 +14,7 @@
         color: #1a1a1a !important;  
     }
 
-    /* 1. Mengubah Judul Utama & Sub-judul Halaman */
+    /* 1. Judul Utama & Sub-judul Halaman */
     body.light-theme h2 {
         color: #1a1a1a !important;
     }
@@ -23,7 +22,7 @@
         color: #4a5568 !important;
     }
 
-    /* Perbaikan untuk Kartu Proyek di Mode Terang */
+    /* Kartu Proyek di Mode Terang */
     body.light-theme .project-card,
     body.light-theme [class*="bg-white/5"], 
     body.light-theme [class*="bg-slate"] { 
@@ -90,12 +89,12 @@
         backdrop-blur: md; /* Efek blur kaca di belakangnya tetap aktif */
     }
 
-    /* 2. Mengubah Tulisan Logo (MITA) menjadi Hitam */
+    /* 2. Tulisan Logo (MITA) menjadi Hitam */
     body.light-theme nav a.text-xl {
         color: #0f172a !important; 
     }
 
-    /* 3. Mengubah Tulisan Menu Navigasi (Home, Projects, Contact) menjadi Gelap */
+    /* 3.Tulisan Menu Navigasi (Home, Projects, Contact) menjadi Gelap */
     body.light-theme nav .hidden.md\:flex a:not(.bg-emerald-500) {
         color: #334155 !important; /* Abu-abu gelap elegan */
     }
@@ -113,13 +112,13 @@
     </style>
     </head>
 
-    <!-- Kabel Ajaib Tailwind -->
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
 <body class="text-slate-100 min-h-screen font-sans selection:bg-emerald-500 selection:text-slate-950">
 
-    <!-- 🌐 BAGIAN 1: NAVBAR (NAVIGASI ATAS YANG RESPONSIF & TRANSPARAN) -->
+    <!-- 🌐 BAGIAN 1: NAVBAR -->
     <nav class="sticky top-0 z-50 bg-slate-900/70 backdrop-blur-md border-b border-white/10 px-6 py-4">
         <div class="max-w-5xl mx-auto flex justify-between items-center">
             
@@ -152,7 +151,7 @@
         </div>
     </nav>
 
-    <!-- 🏡 BAGIAN 2: HERO SECTION (VERSI ENGLISH AESTHETIC) -->
+    <!-- 🏡 BAGIAN 2: SECTION -->
     <section id="home" class="max-w-5xl mx-auto px-6 pt-20 pb-24 flex flex-col md:flex-row items-center justify-between gap-12">
         
         <!-- Tulisan Sambutan -->
@@ -182,7 +181,7 @@
 
     </section>
 
-    <!-- 🏆 BAGIAN GALERI PROYEK (FEATURED MASTERPIECES) -->
+    <!-- 🏆 BAGIAN GALERI PROYEK  -->
     <section class="py-20 px-6 max-w-7xl mx-auto">
     
         <!-- 1. Bagian Judul -->
@@ -191,7 +190,7 @@
             <p class="text-slate-400 text-xs md:text-sm mt-1">A curated showcase of my frontend development journey.</p>
         </div>
 
-        <!-- 🌟 BARISAN TOMBOL FILTER (BERJAJAR DI ATAS KARTU) -->
+        <!-- 🌟 BARISAN TOMBOL FILTER -->
         <div class="flex flex-row flex-wrap justify-center items-center gap-3 mb-12">
             <!-- Tombol All -->
         <button data-filter="all" onclick="saringKarya('all')" class="btn-filter bg-emerald-500 text-slate-950 text-xs md:text-sm font-bold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95 shadow-lg shadow-emerald-500/20">
@@ -212,7 +211,7 @@
         <!-- WADAH UTAMA KARTU PROYEK  -->
         <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
 
-        <!-- KARTU 1: Advanced To-Do List (Disisipkan di awal tag div kartu) -->
+        <!-- KARTU 1: Advanced To-Do List -->
         <div data-category="javascript" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
         <div>
             <div class="flex justify-between items-center mb-4">
@@ -225,7 +224,7 @@
         <a href="#" class="text-emerald-400 font-medium hover:underline inline-flex items-center gap-1 text-sm"> Live Demo 🚀</a>
         </div>
 
-        <!-- KARTU 2: Neon Calculator (Disisipkan di awal tag div kartu) -->
+        <!-- KARTU 2: Neon Calculator -->
         <div data-category="javascript" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
         <div>
             <div class="flex justify-between items-center mb-4">
@@ -238,7 +237,7 @@
         <a href="#" class="text-sky-400 font-medium hover:underline inline-flex items-center gap-1 text-sm"> Live Demo 🚀 </a>
         </div>
 
-        <!-- KARTU 3: Space Portfolio Hub (Disisipkan di awal tag div kartu) -->
+        <!-- KARTU 3: Space Portfolio Hub -->
         <div data-category="tailwind" class="kartu-proyek opacity-0 translate-y-10 transition-all duration-700 ease-out bg-slate-900/50 border border-slate-800 p-6 rounded-2xl shadow-xl flex flex-col justify-between">
         <div>
             <div class="flex justify-between items-center mb-4">
@@ -259,7 +258,7 @@
 
     </section>
 
-        <!-- 📱 BAGIAN 3: CONTACT SECTION (FORMULIR KONTAK GLASSMORPHISM) -->
+        <!-- 📱 BAGIAN 3: CONTACT SECTION (GLASSMORPHISM) -->
     <section id="contact" class="max-w-5xl mx-auto px-6 py-20 border-t border-white/5">
         
         <!-- Judul Bagian Kontak -->
@@ -268,11 +267,11 @@
             <p class="text-slate-400 text-sm">Have a brilliant project idea or just want to say hi? Drop a message and let's build something incredible together.</p>
         </div>
 
-        <!-- Wadah Formulir (Mewah Bergaya Kaca) -->
+        <!-- Wadah Formulir -->
         <div class="max-w-md mx-auto bg-white/5 border border-white/10 p-8 rounded-3xl shadow-xl backdrop-blur-md">
             <form action="https://api.web3forms.com/submit" method="POST" class="space-y-4 max-w-lg mx-auto mt-6">
 
-            <!-- 🔑 KUNCI RAHASIA (Ganti teks di bawah dengan Access Key kamu nanti) -->
+            <!-- 🔑 Access Key -->
             <input type="hidden" name="access_key" value="42604bf6-5868-473e-9d42-47e8cad6268d">
  
                 <!-- Kolom Nama -->
@@ -304,10 +303,10 @@
         </div>
     </section>
 
-<!-- 🔮 MANTRA JAVASCRIPT: ANIMASI SCROLL + FILTER PROYEK MEWAH -->
+<!-- 🔮 JAVASCRIPT: ANIMASI SCROLL + FILTER PROYEK -->
 <script>
   // ==========================================
-  // 1. LOGIKA UTAMA FILTER PROYEK (SAAT DIKLIK)
+  // 1. LOGIKA UTAMA FILTER PROYEK - DIKLIK
   // ==========================================
   function saringKarya(kategoriPilihan) {
     const semuaKartu = document.querySelectorAll('.kartu-proyek');
@@ -324,26 +323,26 @@
           kartu.classList.add('opacity-100', 'scale-100');
         }, 50);
       } else {
-        // Sembunyikan kartu dengan efek memudar dulu
+        // Sembunyikan kartu dengan efek memudar 
         kartu.classList.remove('opacity-100', 'scale-100');
         kartu.classList.add('opacity-0', 'scale-95');
         
-        // Tunggu transisi memudar selesai (300ms), baru hilangkan dari layout
+        // Tunggu transisi memudar selesai (300ms), lalu hilangkan dari layout
         setTimeout(() => {
           kartu.classList.add('hidden');
         }, 300);
       }
     });
 
-    // B. MANIPULASI WARNA TOMBOL AKTIFsecara aman
+    // B. MANIPULASI WARNA TOMBOL AKTIF secara aman
     const semuaTombol = document.querySelectorAll('.btn-filter');
     
-    // Reset semua tombol ke jubah gelap bawaanmu
+    // Reset semua tombol 
     semuaTombol.forEach(tombol => {
       tombol.className = "btn-filter bg-white/5 border border-white/10 text-slate-300 hover:text-white hover:bg-white/10 text-xs md:text-sm font-semibold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95";
     });
     
-    // Beri jubah hijau menyala khusus untuk tombol yang baru saja diklik
+    // Hijau khusus untuk tombol yang baru saja diklik
     if (window.event && window.event.currentTarget) {
       window.event.currentTarget.className = "btn-filter bg-emerald-500 text-slate-950 text-xs md:text-sm font-bold px-5 py-2.5 rounded-xl transition duration-200 active:scale-95 shadow-lg shadow-emerald-500/20";
     }
@@ -395,7 +394,7 @@
     // Toggle class light-theme (kalau ada dihapus, kalau tidak ada ditambah)
     document.body.classList.toggle('light-theme');
   
-    // Cek apakah sekarang posisinya lagi mode terang atau tidak
+    // Mode terang atau tidak
     if (document.body.classList.contains('light-theme')) {
         themeIcon.textContent = '🌙'; // Kasih kode Bulan jika layar sedang terang
         localStorage.setItem('theme', 'light'); // Simpan pilihan di memori
